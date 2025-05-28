@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light Mode */
+    --background: 0 0% 98%;
+    /* Nền sáng nhưng không trắng hoàn toàn */
+    --foreground: 222.2 47% 12%;
+    /* Văn bản tối nhưng không quá đen */
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 47% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47% 12%;
+
+    --primary: 200 100% 50%;
+    /* Giữ màu chủ đạo nhưng giảm độ sáng nhẹ */
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 220 15% 90%;
+    /* Màu phụ giảm sáng */
+    --secondary-foreground: 220 15% 91%;
+    /* Giữ contrast tốt */
+
+    --muted: 210 30% 94%;
+    /* Màu nhạt hơn một chút */
+    --muted-foreground: 215.4 16.3% 40%;
+    /* Giảm độ sáng của chữ trên nền muted */
+
+    --accent: 262 60% 70%;
+    --accent-foreground: 222.2 47.4% 12%;
+
+    --destructive: 0 72% 55%;
+    /* Màu đỏ giảm sáng nhẹ */
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 25% 85%;
+    /* Viền tối hơn một chút */
+    --input: 214.3 25% 85%;
+    --ring: 262 70% 60%;
+
+    --radius: 0.75rem;
+
+    --chart-1: 216, 61%, 22%;
+    --chart-2: 193, 63%, 36%;
+    --chart-3: 178, 79%, 38%;
+    --chart-4: 44, 100%, 75%
+  }
+
+  .dark {
+    /* Dark Mode */
+<<<<<<< HEAD
+    --background: 208, 31%, 12%;
+    --foreground: 206 28% 95%;
+
+    --card: 208 33% 10%;
+    --card-foreground: 210 40% 90%;
+
+    --popover: 210 36% 5%;
+    /* #070b0e */
+    --popover-foreground: 210 28% 96%;
+    /* #eff3f6 */
+
+    --primary: 205 94% 48%;
+    /* #0495f0 */
+    --primary-foreground: 210 28% 96%;
+    /* #eff3f6 */
+
+    --secondary: 208 32% 15%;
+    /* #2e3b44 */
+    --secondary-foreground: 208 31% 12%;
+
+    --muted: 210 22% 22%;
+    /* same as secondary */
+=======
+    --background: 0, 0%, 8%;        
+    --foreground: 202 29% 20%;          
+  
+    --card: 0 0% 12%;                
+    --card-foreground: 255 40% 90%;     
+  
+    --popover: 210 36% 5%;              /* #070b0e */
+    --popover-foreground: 210 28% 96%;  /* #eff3f6 */
+  
+    --primary: 205 94% 48%;             /* #0495f0 */
+    --primary-foreground: 210 28% 96%;  /* #eff3f6 */
+  
+    --secondary: 210 22% 22%;           /* #2e3b44 */
+    --secondary-foreground: 210 28% 96%;
+  
+    --muted: 210 22% 22%;               /* same as secondary */
+>>>>>>> 82912c6 (update admin)
+    --muted-foreground: 210 16% 65%;
+
+    --accent: 202 86% 75%;
+    /* #82ccf9 */
+    --accent-foreground: 210 28% 96%;
+
+    --destructive: 0 72% 45%;
+    /* Giữ nguyên màu đỏ */
+    --destructive-foreground: 210 28% 96%;
+
+    --border: 210 22% 22%;
+    /* #2e3b44 */
+    --input: 210 22% 22%;
+    /* same as border */
+    --ring: 230 96% 47%;
+    /* #0346f2 */
+
+    --radius: 0.75rem;
+  }
+
+  /* Loading animations */
+  .loading-animation {
+    display: flex;
+    align-items: center;
+  }
+
+  .loading-animation .dot {
+    width: 8px;
+    height: 8px;
+    margin: 0 3px;
+    border-radius: 50%;
+    background-color: currentColor;
+    opacity: 0.6;
+    animation: dot-bounce 1.4s infinite ease-in-out both;
+  }
+
+  .loading-animation .dot:nth-child(1) {
+    animation-delay: -0.32s;
+    background-color: hsl(var(--primary));
+    opacity: 0.7;
+  }
+
+  .loading-animation .dot:nth-child(2) {
+    animation-delay: -0.16s;
+    background-color: hsl(var(--primary));
+    opacity: 0.8;
+  }
+
+  .loading-animation .dot:nth-child(3) {
+    background-color: hsl(var(--primary));
+    opacity: 0.9;
+  }
+
+  @keyframes dot-bounce {
+
+    0%,
+    80%,
+    100% {
+      transform: scale(0);
+    }
+
+    40% {
+      transform: scale(1);
+    }
+  }
+
+  .cute-loading {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+  }
+
+  .cute-loading-circle {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: hsl(var(--primary));
+    animation: float 3s infinite ease-in-out;
+    box-shadow: 0 5px 15px hsla(var(--primary) / 0.3);
+  }
+
+  .cute-loading-circle:nth-child(1) {
+    animation-delay: -0.4s;
+  }
+
+  .cute-loading-circle:nth-child(2) {
+    animation-delay: -0.2s;
+  }
+
+  .cute-loading-circle:nth-child(3) {
+    animation-delay: 0s;
+  }
+
+  .cute-loading-sparkle {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 70%);
+    border-radius: 50%;
+    opacity: 0;
+    animation: sparkle 4s infinite ease-in-out;
+  }
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0) scale(1);
+    }
+
+    25% {
+      transform: translateY(-10px) scale(1.1);
+    }
+
+    50% {
+      transform: translateY(0) scale(1);
+    }
+
+    75% {
+      transform: translateY(10px) scale(0.9);
+    }
+  }
+
+  @keyframes sparkle {
+
+    0%,
+    100% {
+      transform: scale(0.2);
+      opacity: 0;
+    }
+
+    25% {
+      transform: scale(1);
+      opacity: 0.6;
+    }
+
+    50% {
+      transform: scale(0.2);
+      opacity: 0;
+    }
+
+    75% {
+      transform: scale(1.2);
+      opacity: 0.4;
+    }
+  }
+
+  /* Add smooth animations for content transitions */
+  .animate-in {
+    animation-duration: 300ms;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-in-from-bottom-2 {
+    from {
+      transform: translateY(10px);
+    }
+
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  .fade-in {
+    animation-name: fade-in;
+  }
+
+  .slide-in-from-bottom-2 {
+    animation-name: slide-in-from-bottom-2;
+  }
+
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  .bg-login {
+    background-image: url('/src/assets/images/login-background.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply backdrop-blur-sm border border-white/20 shadow-lg;
+  }
+
+  .animate-in {
+    animation: fade-in 0.5s ease-out;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+<<<<<<< HEAD
+  background: #00A9FF;
+=======
+  background: #118B50;
+>>>>>>> 82912c6 (update admin)
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #006BFF;
+}
