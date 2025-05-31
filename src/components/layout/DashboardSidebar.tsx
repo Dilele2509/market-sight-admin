@@ -1,9 +1,5 @@
 
-<<<<<<< HEAD
-import { LayoutDashboard, ChartNoAxesCombined, Cable, Moon, Sun, ChevronLeft, ChevronRight, Database, Filter, FolderSync } from "lucide-react";
-=======
 import { LayoutDashboard, Table, SquareTerminal, Building2, KeyRound, Moon, Sun, ChevronLeft, ChevronRight, Database, Filter } from "lucide-react";
->>>>>>> 82912c6 (update admin)
 import {
   Sidebar,
   SidebarContent,
@@ -26,26 +22,6 @@ const menuItems = [
     path: "/",
   },
   {
-<<<<<<< HEAD
-    title: "Phân khúc vi mô",
-    icon: ChartNoAxesCombined,
-    path: "/micro-segmentation",
-  },
-  {
-    title: "Tạo phân khúc",
-    icon: Filter,
-    path: "/create-segmentation",
-  },
-  {
-    title: "Chuẩn hoá dữ liệu",
-    icon: Database,
-    path: "/data-modeling",
-  },
-  {
-    title: "Kết nối dữ liệu",
-    icon: Cable,
-    path: "/connect-data",
-=======
     title: "Table Data",
     icon: Table,
     path: "/table",
@@ -54,12 +30,6 @@ const menuItems = [
     title: "Authentication",
     icon: KeyRound,
     path: "/authentication",
->>>>>>> 82912c6 (update admin)
-  },
-  {
-    title: "Cấu hình đồng bộ",
-    icon: FolderSync,
-    path: "/sync-config",
   },
 ];
 
@@ -89,11 +59,7 @@ const DashboardSidebar = ({ isCollapsed, updateCollapsedStatus }) => {
           </Button>
         </div>
         <SidebarGroup>
-<<<<<<< HEAD
-          <SidebarGroupLabel>{!isCollapsed && "Phân tích"}</SidebarGroupLabel>
-=======
           <SidebarGroupLabel>{!isCollapsed && "Management"}</SidebarGroupLabel>
->>>>>>> 82912c6 (update admin)
           <SidebarGroupContent>
             <SidebarMenu>
               {menuItems.map((item) => {
@@ -134,11 +100,7 @@ const DashboardSidebar = ({ isCollapsed, updateCollapsedStatus }) => {
           {theme === "dark" ? (
             <>
               <Sun className="h-4 w-4" />
-<<<<<<< HEAD
-              {!isCollapsed && <span>Chế độ sáng</span>}
-=======
               {!isCollapsed && <span className="text-card-foreground">Light Mode</span>}
->>>>>>> 82912c6 (update admin)
             </>
           ) : (
             <>

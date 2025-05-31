@@ -54,30 +54,6 @@
 
   .dark {
     /* Dark Mode */
-<<<<<<< HEAD
-    --background: 208, 31%, 12%;
-    --foreground: 206 28% 95%;
-
-    --card: 208 33% 10%;
-    --card-foreground: 210 40% 90%;
-
-    --popover: 210 36% 5%;
-    /* #070b0e */
-    --popover-foreground: 210 28% 96%;
-    /* #eff3f6 */
-
-    --primary: 205 94% 48%;
-    /* #0495f0 */
-    --primary-foreground: 210 28% 96%;
-    /* #eff3f6 */
-
-    --secondary: 208 32% 15%;
-    /* #2e3b44 */
-    --secondary-foreground: 208 31% 12%;
-
-    --muted: 210 22% 22%;
-    /* same as secondary */
-=======
     --background: 0, 0%, 8%;        
     --foreground: 202 29% 20%;          
   
@@ -94,7 +70,6 @@
     --secondary-foreground: 210 28% 96%;
   
     --muted: 210 22% 22%;               /* same as secondary */
->>>>>>> 82912c6 (update admin)
     --muted-foreground: 210 16% 65%;
 
     --accent: 202 86% 75%;
@@ -318,11 +293,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-<<<<<<< HEAD
-  background: #00A9FF;
-=======
   background: #118B50;
->>>>>>> 82912c6 (update admin)
   border-radius: 3px;
 }
 
