@@ -56,7 +56,7 @@ export function ProfileDialog({ open, onOpenChange, user }: ProfileDialogProps) 
     const handleLogout = () => {
         try {
             localStorage.removeItem("token");
-            navigate("/login");
+            navigate("/");
             toast.success("Logged out successfully");
         } catch (error) {
             toast.error("Failed to logout");

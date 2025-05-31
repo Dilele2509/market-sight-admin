@@ -44,7 +44,7 @@ const AvatarConfig: React.FC<AvatarConfigProps> = ({ className = "" }) => {
 
     const handleLogout = () => {
         localStorage.removeItem("token");
-        navigate("/login");
+        navigate("/");
     }
 
     return (

@@ -8,9 +8,10 @@ import {
   PaginationPrevious,
 } from "@/components/ui/pagination";
 import { Button } from "@/components/ui/button";
-import { Check, X } from "lucide-react";
+import { Check, X, AlertCircle } from "lucide-react";
 import { PendingAccount } from "@/types/user";
 import { ButtonLoading } from "@/components/ui/loading";
+import { Alert, AlertDescription } from "@/components/ui/alert";
 
 interface PendingTableProps {
   users: PendingAccount[];
@@ -37,6 +38,13 @@ export function PendingTable({
 }: PendingTableProps) {
   return (
     <div className="space-y-4">
+      <Alert>
+        <AlertCircle className="h-4 w-4" />
+        <AlertDescription>
+          Đây là danh sách các tài khoản đang chờ phê duyệt. Sau khi được phê duyệt, người dùng có thể đăng nhập vào hệ thống.
+        </AlertDescription>
+      </Alert>
+
       <Table>
         <TableHeader>
           <TableRow>
