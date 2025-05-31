@@ -19,11 +19,7 @@ const ProtectedRoutes = () => {
         })}
 
       {/* Nếu đã đăng nhập, thiết lập route cho MicroSegmentation */}
-<<<<<<< HEAD
-      {token && users !== null && (
-=======
       {/* {token && (
->>>>>>> 82912c6 (update admin)
         <>
           <Route path="/micro-segmentation" element={<MicroSegmentation />}>
             <Route index element={<Navigate to="rfm" replace />} />
